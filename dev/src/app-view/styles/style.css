@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400&display=swap');
+
+:root
+{
+    --white-color: hsl(0, 0%, 97%);
+    --dark-color: hsl(210, 4%, 11%);
+    --darker-color: hsl(210, 4%, 9%);
+    --darkest-color: hsl(220, 5%, 13%);
+    --gray-color: hsl(214, 7%, 21%);
+    --purple-color: hsl(260, 54%, 52%);
+    --blue-color: hsl(208, 76%, 53%);
+
+    --font: 'Albert Sans', sans-serif;
+}
+
+*
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.web-mount
+{
+    width: 100vw;
+    height: 100vh;
+
+    top: 0;
+    left: 0;
+
+    position: absolute;
+}
+
+.dark-theme
+{
+    background: var(--dark-color);
+    color: var(--white-color);
+
+    font-family: var(--font);
+
+    position: fixed;
+}
+
+.control-box
+{
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 1.5rem;
+
+    background: var(--darker-color);
+
+    z-index: 99;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
+
+    justify-content: space-between;
+    align-items: center;
+
+    display: flex;
+
+    flex-direction: row;
+
+    position: fixed;
+    
+    border-bottom: .5px solid var(--purple-color);
+
+    /* box-shadow: 0 1px 0 1px var(--dark-theme-background); */
+}
+
+.control-box .app-title
+{
+    padding: 0 6px;
+
+    color: hsl(240, 5%, 64%);
+}
+
+.control-box .cb-button,
+.control-box .customcolor
+{
+    color: hsl(240, 5%, 64%);
+
+    width: 24px;
+    height: 100%;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-app-region: no-drag;
+
+    padding: 2.5px 6px;
+
+    text-align: center;
+
+    top: -4px;
+
+    position: relative;
+}
+
+.control-box .cb-button svg,
+.control-box .customcolor svg
+{
+    align-self: center;
+    top: 6px;
+    position: relative;
+}
+
+.control-box .customcolor:hover
+{
+    color: hsl(240, 50%, 100%);
+
+    background: var(--purple-color);
+}
+
+.control-box .cb-button:hover
+{
+    color: hsl(240, 23%, 92%);
+    
+    background: hsl(240, 5%, 24%);
+}
+
+else
+{
+    top: 24px;
+    
+    position: absolute;
+}
+
+/* Defaults DO NOT (CHANGE THIS UNLESS YOU WANT TO CHANGE COLORS) */
+
+.downloads-list
+{
+    width: 16rem;
+
+    min-height: calc(100vh);
+    max-height: max-content;
+
+    background-color: var(--darker-color);
+
+    border-right: .5px solid var(--purple-color);
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.downloads-header
+{
+    width: 100%;
+    height: 46px;
+
+    font-size: 24px;
+    
+    background: var(--darker-color);
+
+    justify-content: center;
+    align-items: center;
+
+    user-select: none;
+
+    display: flex;
+}
+
+.downloads-header p
+{
+    padding-bottom: 6px;
+
+    width: 100%;
+
+    left: 50%;
+
+    align-content: center;
+    text-align: center;
+
+    align-self: center;
+
+    transform: translateX(-50%);
+
+    font-size: 20px;
+
+    position: absolute;
+}
+
+.download-i-box
+{
+    width: 100%;
+    height: 24px;
+
+    font-size: 16px;
+
+    border-bottom: .5px solid var(--darkest-color);
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.download-i-box .i-logo
+{
+    width: 18px;
+    aspect-ratio: 1/1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    left: 8px;
+
+    margin-top: 2px;
+
+    -webkit-user-drag: none;
+
+    position: absolute;
+}
+
+.download-i-box .i-text
+{
+    left: 2px;
+
+    text-align: center;
+
+    user-select: none;
+
+    width: 196px;
+    height: 23px;
+
+    display: flex;
+
+    padding-right: 8px;
+
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    color: white;
+
+    border-right: .5px solid var(--darkest-color);
+}
+
+.download-i-box .i-percentage
+{
+    margin-right: 20px;
+
+    font-size: 12px;
+
+    right: -18px;
+    
+    margin-top: 6px;
+
+    justify-content: center;
+    align-items: center;
+
+    display: flex;
+
+    position: absolute;
+}
+
+.downloads-section
+{
+    left: 50%;
+    bottom: 1%;
+
+    transform: translate(-50%, -50%);
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    display: flex;
+
+    position: absolute;
+}
+
+.downloads-section .custom-flex
+{
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    display: flex;
+}
+
+.downloads-section .custom-flex p
+{
+    margin-left: 4px;
+}
+
+.url-section
+{
+    top: calc(50% + 24px);
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+}
+
+.url-section p
+{
+    user-select: none;
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.url-section input
+{
+    padding: 4px 64px;
+
+    border-radius: 12px;
+
+    border: 1px solid var(--gray-color);
+
+    outline: none;
+
+    background: var(--darker-color);
+    color: var(--purple-color);
+
+    text-align: center;
+    
+    margin-bottom: 6px;
+}
+
+.url-section button
+{
+    background: var(--darker-color);
+    color: var(--purple-color);
+
+    border: 1px solid var(--gray-color);
+    
+    outline: none;
+
+    padding: 2px;
+
+    margin-bottom: 6px;
+
+    font-size: 16px;
+    
+    font-family: var(--font);
+
+    border-radius: 12px;
+}
