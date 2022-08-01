@@ -7,6 +7,7 @@ const API = {
         minimize: () => ipcRenderer.send("app/minimize"),
     },
     maximizeState: (data) => ipcRenderer.invoke("max_state/get", data),
+    fetchURL: (data) => ipcRenderer.invoke("cli_url/get", data),
 };
 
 
